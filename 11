@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+ 
+        System.out.print("Digite o preço da gasolina (R$): ");
+        double precoGasolina = scanner.nextDouble();
+        
+        System.out.print("Digite o preço do etanol (R$): ");
+        double precoEtanol = scanner.nextDouble();
+       
+        double percentualEtanol = (precoEtanol / precoGasolina) * 100;
+        
+        if (percentualEtanol < 70) {
+            System.out.println("É mais vantajoso abastecer com etanol.");
+        } else {
+            System.out.println("É mais vantajoso abastecer com gasolina.");
+        }
+        
+        scanner.close();
+    }
+}
+
+

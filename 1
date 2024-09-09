@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("DIGITE O VALOR DO PRIMEIRO NÚMERO (X): ");
+        int x = scanner.nextInt();
+        
+        System.out.print("DIGITE O VALOR DO SEGUNDO NÚMERO (Y): ");
+        int y = scanner.nextInt();
+        
+        if (y == 0) {
+            System.out.println("Erro: Divisão por zero não é permitida.");
+        } else {
+          
+            int resto = x % y;
+           
+            System.out.printf("O RESTO DA DIVISÃO ENTRE ELES É: %d%n", resto);
+        }
+      
+        scanner.close();
+    }
+}

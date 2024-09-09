@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+       
+        System.out.print("Digite o peso da pessoa em quilogramas (kg): ");
+        double peso = scanner.nextDouble();
+        
+        double quantidadeAguaMl = peso * 35;
+        
+        double quantidadeAguaLitros = quantidadeAguaMl / 1000;
+        
+        System.out.printf("Quantidade recomendada de água por dia: %.2f litros%n", quantidadeAguaLitros);
+    
+        scanner.close();
+    }
+}

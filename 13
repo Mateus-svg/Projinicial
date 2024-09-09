@@ -1,0 +1,43 @@
+import java.util.Scanner;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Digite a largura da área (em metros): ");
+        double larguraArea = scanner.nextDouble();
+        System.out.print("Digite o comprimento da área (em metros): ");
+        double comprimentoArea = scanner.nextDouble();
+        
+        System.out.print("Digite a largura da cerâmica (em metros): ");
+        double larguraCeramica = scanner.nextDouble();
+        System.out.print("Digite o comprimento da cerâmica (em metros): ");
+        double comprimentoCeramica = scanner.nextDouble();
+       
+        System.out.print("Digite o valor do metro quadrado da cerâmica (R$): ");
+        double valorMetroQuadrado = scanner.nextDouble();
+       
+        double areaTotal = larguraArea * comprimentoArea;
+        double areaCeramica = larguraCeramica * comprimentoCeramica;
+        
+        double quantidadeNecessaria = areaTotal / areaCeramica;
+        
+        double quantidadeComAcabamento = quantidadeNecessaria * 1.10;
+        
+        BigDecimal quantidadeFinal = new BigDecimal(quantidadeComAcabamento).setScale(0, RoundingMode.UP);
+        
+        double areaTotalNecessaria = quantidadeFinal.doubleValue() * areaCeramica;
+        double valorTotal = areaTotalNecessaria * valorMetroQuadrado;
+        
+        System.out.println("Quantidade de cerâmica necessária (incluindo 10% para acabamento): " + quantidadeFinal.intValue() + " peças");
+        System.out.printf("Valor do metro quadrado da cerâmica: R$ %.2f%n", valorMetroQuadrado);
+        System.out.printf("Valor total a ser pago: R$ %.2f%n", valorTotal);
+        
+        scanner.close();
+    }
+}
+
+

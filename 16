@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+       
+        System.out.print("Digite a nota da primeira avaliação (0 a 10): ");
+        double nota1 = scanner.nextDouble();
+        
+        System.out.print("Digite a nota da segunda avaliação (0 a 10): ");
+        double nota2 = scanner.nextDouble();
+        
+        System.out.print("Digite a nota da terceira avaliação (0 a 10): ");
+        double nota3 = scanner.nextDouble();
+        
+        double media = (nota1 + nota2 + nota3) / 3;
+        
+        if (media >= 7) {
+            System.out.println("O aluno foi aprovado.");
+        } else {
+            System.out.println("O aluno foi reprovado.");
+        }
+        
+        System.out.printf("A média do aluno é: %.2f%n", media);
+        
+        scanner.close();
+    }
+}

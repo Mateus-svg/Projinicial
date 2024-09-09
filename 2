@@ -1,0 +1,17 @@
+//Exercício 2 :
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+Scanner scanner = new Scanner(System.in);
+final double COTACAO_DOLAR = 5.61;
+System.out.print("Digite o valor em dólares: ");
+double valorDolares = scanner.nextDouble();
+double valorReais = valorDolares * COTACAO_DOLAR;
+System.out.printf("O valor em reais é: R$ %.2f%n", valorReais);
+scanner.close();
+    
+    }
+
+  }
+

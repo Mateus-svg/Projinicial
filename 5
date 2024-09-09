@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+       
+        System.out.print("Digite o valor da hora de trabalho (R$): ");
+        double valorHora = scanner.nextDouble();
+        
+        
+        System.out.print("Digite o número de horas trabalhadas no mês: ");
+        int horasTrabalhadas = scanner.nextInt();
+        
+       
+        System.out.print("Digite o percentual de desconto do INSS (em %): ");
+        double percentualINSS = scanner.nextDouble();
+        
+       
+        double salarioBruto = valorHora * horasTrabalhadas;
+        
+        
+        double descontoINSS = salarioBruto * (percentualINSS / 100.0);
+        
+       
+       double salarioLiquido = salarioBruto - descontoINSS;
+        
+        System.out.printf("Salário Bruto: R$ %.2f%n", salarioBruto);
+        System.out.printf("Desconto do INSS: R$ %.2f%n", descontoINSS);
+        System.out.printf("Salário Líquido: R$ %.2f%n", salarioLiquido);
+  
+        scanner.close();
+    }
+}

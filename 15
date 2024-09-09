@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+     
+        System.out.print("Digite a coordenada x1 do ponto P1: ");
+        double x1 = scanner.nextDouble();
+        System.out.print("Digite a coordenada y1 do ponto P1: ");
+        double y1 = scanner.nextDouble();
+        
+        System.out.print("Digite a coordenada x2 do ponto P2: ");
+        double x2 = scanner.nextDouble();
+        System.out.print("Digite a coordenada y2 do ponto P2: ");
+        double y2 = scanner.nextDouble();
+        
+        double deltaX = x2 - x1;
+        double deltaY = y2 - y1;
+        double distancia = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+    
+        System.out.printf("A distância entre os pontos P1 e P2 é: %.2f%n", distancia);
+        
+        scanner.close();
+    }
+}
